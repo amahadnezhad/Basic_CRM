@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     # Local Apps
     'accounts.apps.AccountsConfig',
     'pages.apps.PagesConfig',
+    'customers.apps.CustomersConfig',
 ]
 
 SITE_ID = 1
