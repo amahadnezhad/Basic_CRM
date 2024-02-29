@@ -153,8 +153,8 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # Authentication Setting
 AUTH_USER_MODEL = 'accounts.CustomUser'
-LOGIN_REDIRECT_URL = 'home'
-LOGOUT_REDIRECT_URL = 'home'
+LOGIN_REDIRECT_URL = 'customers_list'
+LOGOUT_REDIRECT_URL = 'customers_list'
 
 # AllAuth Setting
 ACCOUNT_SESSION_REMEMBER = True
