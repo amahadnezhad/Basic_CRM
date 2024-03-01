@@ -19,7 +19,6 @@ class Customer(models.Model):
     gender = models.CharField(choices=GENDER_CHOICES, max_length=1)
     job = models.CharField(max_length=100)
     vip = models.BooleanField(default=False)
-    education = models.CharField(max_length=100)
 
     datetime_created = models.DateTimeField(auto_now_add=True)
     datetime_modified = models.DateTimeField(auto_now=True)
