@@ -8,4 +8,7 @@ class CustomerForm(forms.ModelForm):
         model = Customer
         fields = ['firstname', 'lastname', 'nat_id', 'father_name', 'date_of_birth', 'phone_number', 'country', 'city',
                   'gender', 'job', 'vip', ]
+        widgets = {
+            'date_of_birth': forms.TextInput(attrs={'type': 'date'}),
+        }
 
