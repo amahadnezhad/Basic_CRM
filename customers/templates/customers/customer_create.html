@@ -1,12 +1,22 @@
 {% extends '_base.html' %}
+{% load crispy_forms_tags %}
+
 {% block page_title %}Add New Customer{% endblock page_title %}
 
 {% block content %}
-    <form action="" method="POST">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit">Add</button>
+     <h1 class="d-flex justify-content-center mt-5">New Record</h1>
+    <div class="d-flex justify-content-center mt-5">
+        <div class="card border-secondary" style="width:30rem;">
+            <div class="container mt-4">
+                <form action="" method="POST">
+                    {% csrf_token %}
+                    {{ form|crispy }}
+                    <button type="submit" class="btn btn-outline-success mt-3">Add</button>
 
-    </form>
+                </form>
+
+            </div>
+        </div>
+    </div>
 
 {% endblock content %}
