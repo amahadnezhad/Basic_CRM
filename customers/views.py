@@ -23,3 +23,9 @@ class CustomerUpdateView(generic.UpdateView):
     form_class = CustomerForm
     template_name = 'customers/customer_update.html'
     success_url = reverse_lazy('customers_list')
+
+
+class CustomerDeleteView(generic.DeleteView):
+    model = Customer
+    template_name = 'customers/customer_delete.html'
+    success_url = reverse_lazy('customers_list')

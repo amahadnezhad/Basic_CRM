@@ -2,20 +2,19 @@
 {% load crispy_forms_tags %}
 
 
-{% block page_title %}Update{% endblock page_title %}
+{% block page_title %}Delete?{% endblock page_title %}
 
 {% block content %}
-    <h1 class="d-flex justify-content-center mt-5">Update</h1>
+    <h1 class="d-flex justify-content-center mt-5">Are You Sure</h1>
     <div class="d-flex justify-content-center mt-5">
         <div class="card border-secondary" style="width:30rem;">
             <div class="container mt-4">
                 <form action="" method="POST">
                     {% csrf_token %}
-                    {{ form|crispy }}
-                    <button type="submit" class="btn btn-outline-success">Update</button>
-                    <a type="submit" class="btn btn-outline-danger" href="{% url 'customer_delete' customer.id %}" >Delete</a>
+                    <p>Do You Want To Delete This Row?</p>
+                    <button type="submit" class="btn btn-outline-danger">Delete</button>
                 </form>
-
+                <br>
             </div>
         </div>
     </div>
