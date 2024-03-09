@@ -16,3 +16,10 @@ class CustomerCreateView(generic.CreateView):
     form_class = CustomerForm
     template_name = 'customers/customer_create.html'
     success_url = reverse_lazy('customers_list')
+
+
+class CustomerUpdateView(generic.UpdateView):
+    model = Customer
+    form_class = CustomerForm
+    template_name = 'customers/customer_update.html'
+    success_url = reverse_lazy('customers_list')
