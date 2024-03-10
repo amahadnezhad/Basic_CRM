@@ -1,3 +1,5 @@
+{% load i18n %}
+
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html lang="en">
 <head>
@@ -25,13 +27,13 @@
         </div>
         <div class="mx-2 text-white">
             {% if user.is_authenticated %}
-                خوش آمدید {{ user.username }}
+                {% translate 'Welcome' %} {{ user.username }}
                 |
-                <a class="link-light text-decoration-none" href="{% url 'account_logout' %}">خروج</a>
+                <a class="link-light text-decoration-none" href="{% url 'account_logout' %}">{% trans "logout" %}</a>
             {% else %}
-                <a class="link-light text-decoration-none" href="{% url 'account_login' %}">ورود</a>
+                <a class="link-light text-decoration-none" href="{% url 'account_login' %}">{% trans "login" %}</a>
                 |
-                <a class="link-light text-decoration-none" href="{% url 'account_signup' %}">ثبت نام</a>
+                <a class="link-light text-decoration-none" href="{% url 'account_signup' %}">{% trans "Signup" %}</a>
             {% endif %}
         </div>
     </div>
@@ -48,7 +50,7 @@
             <div class="row justify-content-center">
                 <div class="col-lg-9 text-center">
                     <div class="footer-widget">
-                        BasicCRM.com © | all rights reserved
+                        BasicCRM.com © | {% trans "all rights reserved" %}
                     </div>
                 </div>
             </div>
