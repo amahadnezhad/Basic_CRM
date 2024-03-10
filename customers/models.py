@@ -5,9 +5,9 @@ from django.utils.translation import gettext_lazy as _
 
 class Customer(models.Model):
     GENDER_CHOICES = (
-        ('1', 'Male'),
-        ('2', 'Female'),
-        ('3', 'Other'),
+        (1, _('Male')),
+        (2, _('Female')),
+        (3, _('Other')),
     )
 
     firstname = models.CharField(verbose_name=_("FirstName"), max_length=100)
