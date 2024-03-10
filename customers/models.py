@@ -22,8 +22,8 @@ class Customer(models.Model):
     job = models.CharField(verbose_name=_("Job"), max_length=100)
     vip = models.BooleanField(verbose_name=_("VIP"), default=False)
 
-    datetime_created = models.DateTimeField(auto_now_add=True)
-    datetime_modified = models.DateTimeField(auto_now=True)
+    datetime_created = models.DateTimeField(verbose_name=_("Created DateTime"), auto_now_add=True)
+    datetime_modified = models.DateTimeField(verbose_name=_("Modified DateTime"), auto_now=True)
 
     def get_absolute_url(self):
         return reverse('customers_list', args=[self.id])
