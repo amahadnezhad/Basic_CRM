@@ -1,5 +1,6 @@
 {% extends '_base.html' %}
 {% load i18n %}
+{% load jalali_tags %}
 
 {% block page_title %}{% trans "Customers" %}{% endblock page_title %}
 
@@ -36,7 +37,7 @@
                         <td>{{ customer.lastname }}</td>
                         <td>{{ customer.nat_id }}</td>
                         <td>{{ customer.father_name }}</td>
-                        <td>{{ customer.date_of_birth }}</td>
+                        <td>{{ customer.date_of_birth|to_jalali:'%Y/%m/%d' }}</td>
                         <td>{{ customer.phone_number }}</td>
                         <td width="10">{{ customer.country }}</td>
                         <td width="10">{{ customer.city }}</td>
