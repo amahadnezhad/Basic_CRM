@@ -13,7 +13,7 @@ class Customer(models.Model):
     firstname = models.CharField(verbose_name=_("FirstName"), max_length=100)
     lastname = models.CharField(verbose_name=_("LastName"), max_length=100)
     nat_id = models.CharField(verbose_name=_("National_ID"), max_length=10)
-    father_name = models.CharField(verbose_name=_("National_ID"), max_length=100)
+    father_name = models.CharField(verbose_name=_("FatherName"), max_length=100)
     date_of_birth = models.DateField(verbose_name=_("Date of Birth"))
     phone_number = models.CharField(verbose_name=_("Phone Number"), max_length=12)
     country = models.CharField(verbose_name=_("Country"), max_length=50)
