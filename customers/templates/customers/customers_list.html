@@ -33,7 +33,7 @@
                 <tbody>
                 {% for customer in customers_list %}
                     <tr>
-                        <th scope="row">1</th>
+                        <th scope="row">{{ forloop.counter }}</th>
                         <td>{{ customer.firstname }}</td>
                         <td>{{ customer.lastname }}</td>
                         <td>{{ customer.nat_id }}</td>
