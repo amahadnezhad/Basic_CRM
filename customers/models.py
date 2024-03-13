@@ -4,12 +4,11 @@ from django.utils.translation import gettext_lazy as _
 
 
 class Customer(models.Model):
-    GENDER_CHOICES = (
-        (1, _('Male')),
-        (2, _('Female')),
-        (3, _('Other')),
-    )
-
+    GENDER_CHOICES = [
+        ('1', _('Male')),
+        ('2', _('Female')),
+        ('3', _('Other')),
+    ]
     firstname = models.CharField(verbose_name=_("FirstName"), max_length=100)
     lastname = models.CharField(verbose_name=_("LastName"), max_length=100)
     nat_id = models.CharField(verbose_name=_("National_ID"), max_length=10)

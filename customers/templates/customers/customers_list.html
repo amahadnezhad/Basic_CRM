@@ -42,7 +42,15 @@
                         <td>{{ customer.phone_number|translate_number }}</td>
                         <td width="10">{{ customer.country }}</td>
                         <td width="10">{{ customer.city }}</td>
-                        <td width="10">{{ customer.gender }}</td>
+                        <td width="10">
+                            {% if customer.gender == '1' %}
+                                <p>{% trans 'Male' %}</p>
+                             {% elif customer.gender == '2' %}
+                                <p>{% trans 'Female' %}</p>
+                              {% else %}
+                                <p>{% trans 'Other' %}</p>
+                            {% endif %}
+                        </td>
                         <td>{{ customer.job }}</td>
                         <td width="10">
                             {% if customer.vip %}
